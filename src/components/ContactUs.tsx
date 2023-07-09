@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Grid, Avatar } from '@mui/material';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
@@ -8,46 +8,51 @@ import React from 'react';
 const ContactUs = () => {
     return (
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '50px' }}>
-            <Box sx={{ textAlign: 'center', border: '2px solid #7C58D3', position: 'relative', padding: "8px", borderRadius: '15px' }}>
-                <Typography sx={{ position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)' }}><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="40" r="40" fill="#7C58D3" />
-                    <LocalPhoneIcon sx={{ color: '#FFFFFF' }} />
-                </svg></Typography>
-                <Typography sx={{ color: '#0B0417', paddingTop: '35px', paddingX: '95px' }} variant="h6" gutterBottom>Phone</Typography>
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Box sx={{ textAlign: 'center', border: '2px solid #7C58D3', borderRadius: '15px', padding: '8px' }}>
+                        <Avatar sx={{ width: '80px', height: '80px', backgroundColor: '#7C58D3', margin: '0 auto' }}>
+                            <LocalPhoneIcon sx={{ fontSize: '2rem', color: '#FFFFFF' }} />
+                        </Avatar>
+                        <Typography sx={{ color: '#0B0417', paddingTop: '35px' }} variant="h6" gutterBottom>Phone</Typography>
+                        <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(913) 756-3126</Typography>
+                        <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(921) 557-1203</Typography>
+                    </Box>
+                </Grid>
 
-                <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(913) 756-3126</Typography>
-                <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(921) 557-1203</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', border: '2px solid #7C58D3', position: 'relative', padding: "8px", borderRadius: '15px' }}>
-                <Typography sx={{ position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)' }}><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="40" r="40" fill="#EBE5F7" />
-                    <EmailIcon sx={{ color: '#7C58D3' }} />
-                </svg></Typography>
-                <Typography sx={{ color: '#0B0417', paddingTop: '35px', paddingX: '95px' }} variant="h6" gutterBottom>Phone</Typography>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Box sx={{ textAlign: 'center', border: '2px solid #7C58D3', borderRadius: '15px', padding: '8px' }}>
+                        <Avatar sx={{ width: '80px', height: '80px', backgroundColor: '#EBE5F7', margin: '0 auto' }}>
+                            <EmailIcon sx={{ fontSize: '2rem', color: '#7C58D3' }} />
+                        </Avatar>
+                        <Typography sx={{ color: '#0B0417', paddingTop: '35px' }} variant="h6" gutterBottom>Email</Typography>
+                        <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(913) 756-3126</Typography>
+                        <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(921) 557-1203</Typography>
+                    </Box>
+                </Grid>
 
-                <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(913) 756-3126</Typography>
-                <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(921) 557-1203</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', border: '2px solid #7C58D3', position: 'relative', padding: "8px", borderRadius: '15px' }}>
-                <Typography sx={{ position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)' }}><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="40" r="40" fill="#EBE5F7" />
-                    <FmdGoodIcon sx={{ color: '#7C58D3' }} />
-                </svg></Typography>
-                <Typography sx={{ color: '#0B0417', paddingTop: '35px', paddingX: '95px' }} variant="h6" gutterBottom>Phone</Typography>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Box sx={{ textAlign: 'center', border: '2px solid #7C58D3', borderRadius: '15px', padding: '8px' }}>
+                        <Avatar sx={{ width: '80px', height: '80px', backgroundColor: '#EBE5F7', margin: '0 auto' }}>
+                            <FmdGoodIcon sx={{ fontSize: '2rem', color: '#7C58D3' }} />
+                        </Avatar>
+                        <Typography sx={{ color: '#0B0417', paddingTop: '35px' }} variant="h6" gutterBottom>Good</Typography>
+                        <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(913) 756-3126</Typography>
+                        <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(921) 557-1203</Typography>
+                    </Box>
+                </Grid>
 
-                <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(913) 756-3126</Typography>
-                <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(921) 557-1203</Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', border: '2px solid #7C58D3', position: 'relative', padding: "8px", borderRadius: '15px' }}>
-                <Typography sx={{ position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)' }}><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="40" r="40" fill="#EBE5F7" />
-                    <AccessTimeIcon fontSize='small' sx={{ color: '#09c', fontSize: 'small' }} />
-                </svg></Typography>
-                <Typography sx={{ color: '#0B0417', paddingTop: '35px', paddingX: '95px' }} variant="h6" gutterBottom>Phone</Typography>
-
-                <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(913) 756-3126</Typography>
-                <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(921) 557-1203</Typography>
-            </Box>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Box sx={{ textAlign: 'center', border: '2px solid #7C58D3', borderRadius: '15px', padding: '8px' }}>
+                        <Avatar sx={{ width: '80px', height: '80px', backgroundColor: '#EBE5F7', margin: '0 auto' }}>
+                            <AccessTimeIcon sx={{ fontSize: '2rem', color: '#7C58D3' }} />
+                        </Avatar>
+                        <Typography sx={{ color: '#0B0417', paddingTop: '35px' }} variant="h6" gutterBottom>Time</Typography>
+                        <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(913) 756-3126</Typography>
+                        <Typography sx={{ color: '#0B0417' }} variant="h6" gutterBottom>(921) 557-1203</Typography>
+                    </Box>
+                </Grid>
+            </Grid>
         </Box>
     );
 };
