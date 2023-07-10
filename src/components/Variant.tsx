@@ -1,12 +1,11 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { Formik, Form, FieldArray, useFormikContext } from "formik";
 import FormikControl from "./formik/FormikControl.tsx";
 import * as Yup from "yup";
-import { fetchAllCategories, fetchAttributes } from "../services/products";
+import { fetchAttributes } from "../services/products";
 import { Grid, IconButton } from "@mui/material";
 import CancelIcon from "@mui/icons-material/Cancel";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
@@ -67,7 +66,7 @@ export default function BasicModal() {
             validationSchema={validationSchema}
             onSubmit={submitHandler}
           >
-            {(formikProps) => {
+            {(_formikProps) => {
               return (
                 <Form>
                   <FieldArray
@@ -75,7 +74,7 @@ export default function BasicModal() {
                     render={({ form, remove, push }) => {
                       return (
                         <Box>
-                          {form?.values?.sku_set?.map((el, index) => (
+                          {form?.values?.sku_set?.map((_el, index) => (
                             <Grid container>
                               <Grid item xs={12} md={4}>
                                 <FormikControl

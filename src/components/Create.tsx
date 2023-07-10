@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Variant from "./Variant.tsx";
 import { Formik, Form } from "formik";
@@ -102,7 +101,7 @@ export default function BasicModal() {
                     Add Product
                   </Button>
                   <Box>
-                    {formikProps.values.items.map((variant: any, index) => (
+                    {formikProps.values.items.map((_variant: any, index) => (
                       <Box>Variant ({index})</Box>
                     ))}
                   </Box>

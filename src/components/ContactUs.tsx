@@ -3,7 +3,6 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import React from 'react';
 
 const ContactUs = () => {
     return (

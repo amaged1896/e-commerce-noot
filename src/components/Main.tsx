@@ -1,5 +1,4 @@
-import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import dogBg from './../../public/assets/imgs/dog.png';
 
 const Main = () => {
