@@ -13,7 +13,6 @@ import {
   Email as EmailIcon
 } from '@mui/icons-material';
 
-
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -24,24 +23,24 @@ export default function Navbar() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 10 }}
+            sx={{ mr: { xs: 1, sm: 2 } }} // Adjust the spacing based on screen size
           />
 
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <FacebookIcon sx={{ pr: 1 }} />
-            <InstagramIcon sx={{ pr: 1 }} />
-            <TwitterIcon sx={{ pr: 1 }} />
-            <WhatsAppIcon sx={{ pr: 1 }} />
-          </Typography>
+          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
+            <FacebookIcon sx={{ mx: 0.5 }} />
+            <InstagramIcon sx={{ mx: 0.5 }} />
+            <TwitterIcon sx={{ mx: 0.5 }} />
+            <WhatsAppIcon sx={{ mx: 0.5 }} />
+          </Box>
 
-          <Box display="flex" alignItems="center" sx={{ marginRight: 4 }}>
+          <Box display="flex" alignItems="center" sx={{ marginRight: { xs: 1, sm: 2 } }}>
             <LocalPhoneIcon sx={{ marginRight: '0.5rem' }} />
             <Typography variant="h6" component="div">
               0000 - 123456789
             </Typography>
           </Box>
 
-          <Box display="flex" alignItems="center" sx={{ marginRight: 10 }}>
+          <Box display="flex" alignItems="center">
             <EmailIcon sx={{ marginRight: '0.5rem' }} />
             <Typography variant="h6" component="div">
               info@example.com

@@ -1,24 +1,18 @@
 import react from 'react';
-import Navbar from './components/Navbar.tsx';
-import Main from './components/Main.tsx';
-import Counter from './components/Counter.tsx';
-import Services from './components/Services.tsx';
-import Rate from './components/Rate.tsx';
-import { Container } from '@mui/material';
-import ContactUs from './components/ContactUs.tsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import LandingPage from './pages/LandingPage.tsx';
+import Dashboard from './pages/Dashboard.tsx';
 
 function App() {
+  const routers = createBrowserRouter([
+    { path: '/', element: <LandingPage /> },
+    { path: 'products', element: <Dashboard /> }
+
+  ]);
 
   return (
     <>
-      <Navbar />
-      <Container>
-        <Main />
-        <Counter />
-        {/* <Services /> */}
-        <Rate />
-        <ContactUs />
-      </Container>
+      <RouterProvider router={routers}></RouterProvider>
     </>
   );
 }
